@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (ev) => {
 
   // Updates Data
   document
-    .getElementsByClassName("updates")
+    .getElementsByClassName("recent-updates")
     .item(0)
     .appendChild(buildUpdatesList());
 });
@@ -37,17 +37,19 @@ const buildUpdatesList = () => {
   const updateData = UPDATE_DATA;
 
   const div = document.createElement("div");
-  div.classList.add("update");
+  div.classList.add("updates");
 
   let updateContent = "";
   for (const update of updateData) {
     updateContent += `
-      <div class="profile-photo">
-        <img src="${update.imgSrc}" />
-      </div>
-      <div class="message">
-        <p><b>${update.profileName}</b> ${update.message}</p>
-        <small class="text-muted">${update.updatedTime}</small>
+      <div class="update">
+        <div class="profile-photo">
+          <img src="${update.imgSrc}" />
+        </div>
+        <div class="message">
+          <p><b>${update.profileName}</b> ${update.message}</p>
+          <small class="text-muted">${update.updatedTime}</small>
+        </div>
       </div>
     `;
   }
