@@ -335,3 +335,71 @@ main .recent-orders a {
   color: var(--color-primary);
 }
 /* END RECENT ORDERS */
+
+/* START RIGHT SECTION */
+.right {
+  margin-top: 1.4rem;
+}
+.right .top {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+.right .top button {
+  display: none;
+}
+.right .theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+.right .theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .theme-toggler span.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+.right .top .profile {
+  display: flex;
+  gap: 2rem;
+  text-align: right;
+}
+
+/* START RECENT UPDATES */
+.right .recent-updates {
+  margin-top: 1rem;
+}
+.right .recent-updates h2 {
+  margin-bottom: 0.8rem;
+}
+.right .recent-updates .updates {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .recent-updates .updates:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+.right .recent-updates .updates .update {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+/* END RECENT UPDATES */
+/* END RIGHT SECTION */
