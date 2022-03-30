@@ -1,6 +1,13 @@
 // Executes when document is loaded
 document.addEventListener("DOMContentLoaded", (ev) => {
+  // Recent Orders Data
   document.getElementById("recent-orders--table").appendChild(buildTableBody());
+
+  // Updates Data
+  document
+    .getElementsByClassName("updates")
+    .item(0)
+    .appendChild(buildUpdatesList());
 });
 
 const buildTableBody = () => {
@@ -24,4 +31,28 @@ const buildTableBody = () => {
   tbody.innerHTML = bodyContent;
 
   return tbody;
+};
+
+const buildUpdatesList = () => {
+  const updateData = UPDATE_DATA;
+
+  const div = document.createElement("div");
+  div.classList.add("update");
+
+  let updateContent = "";
+  for (const update of updateData) {
+    updateContent += `
+      <div class="profile-photo">
+        <img src="${update.imgSrc}" />
+      </div>
+      <div class="message">
+        <p><b>${update.profileName}</b> ${update.message}</p>
+        <small class="text-muted">${update.updatedTime}</small>
+      </div>
+    `;
+  }
+
+  div.innerHTML = updateContent;
+
+  return div;
 };
