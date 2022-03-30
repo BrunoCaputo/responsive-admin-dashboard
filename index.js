@@ -1,6 +1,6 @@
 // Executes when document is loaded
 document.addEventListener("DOMContentLoaded", (ev) => {
-  document.getElementById("recent-order--table").appendChild(buildTableBody());
+  document.getElementById("recent-orders--table").appendChild(buildTableBody());
 });
 
 const buildTableBody = () => {

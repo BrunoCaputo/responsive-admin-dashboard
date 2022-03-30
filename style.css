@@ -199,7 +199,9 @@ aside .sidebar .message-count {
 main {
   margin-top: 1.4rem;
 }
-main .data {
+
+/* START DATE INPUT */
+main .date {
   display: inline-block;
   background: var(--color-light);
   border-radius: var(--border-radius-1);
@@ -210,6 +212,9 @@ main .date input[type="date"] {
   background: transparent;
   color: var(--color-dark);
 }
+/* END DATE INPUT */
+
+/* START INSIGHTS */
 main .insights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -293,3 +298,40 @@ main .insights small {
   margin-top: 1.6rem;
   display: block;
 }
+/* END INSIGHTS */
+
+/* START RECENT ORDERS */
+main .recent-orders {
+  margin-top: 2rem;
+}
+main .recent-orders h2 {
+  margin-bottom: 0.8rem;
+}
+main .recent-orders table {
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+main .recent-orders table:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+main table tbody tr:last-child td {
+  border: none;
+}
+main .recent-orders a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
+}
+/* END RECENT ORDERS */
