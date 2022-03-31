@@ -286,8 +286,8 @@ main .insights .income svg circle {
 }
 main .insights .progress .number {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -463,3 +463,48 @@ main .recent-orders a {
 }
 /* END SALES ANALYTICS */
 /* END RIGHT SECTION */
+
+/* START MEDIA QUERIES */
+/* TABLETS AND SMALL LAPTOPS */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+  aside .logo h2 {
+    display: none;
+  }
+  aside .sidebar h3 {
+    display: none;
+  }
+  aside .sidebar a {
+    width: 5.6rem;
+  }
+  aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+  main .recent-orders table {
+    width: 83vw;
+  }
+  main .recent-orders table thead tr th:first-child,
+  main .recent-orders table thead tr th:last-child {
+    display: none;
+  }
+  main .recent-orders table tbody tr td:first-child,
+  main .recent-orders table tbody tr td:last-child {
+    display: none;
+  }
+}
+/* END MEDIA QUERIES */
