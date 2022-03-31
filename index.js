@@ -68,7 +68,8 @@ const buildSalesAnalytics = (element) => {
 
   for (const analytic of salesAnalyticsData) {
     const item = document.createElement("div");
-    item.classList.add(["item", analytic.itemClass]);
+    item.classList.add("item");
+    item.classList.add(analytic.itemClass);
 
     const itemHtml = `
       <div class="icon">
