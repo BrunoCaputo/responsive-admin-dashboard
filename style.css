@@ -27,6 +27,16 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* DARK THEME VARIABLES */
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 /* STYLES */
 * {
   margin: 0;
@@ -452,6 +462,10 @@ main .recent-orders a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.right .sales-analytics .add-product:hover {
+  background: var(--color-primary);
+  color: white;
 }
 .right .sales-analytics .add-product div {
   display: flex;
