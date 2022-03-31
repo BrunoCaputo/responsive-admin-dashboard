@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", (ev) => {
     .getElementsByClassName("recent-updates")
     .item(0)
     .appendChild(buildUpdatesList());
+
+  // Sales Analytics
+  const salesAnalytics = document.getElementById("analytics");
+  buildSalesAnalytics(salesAnalytics);
 });
 
 const buildTableBody = () => {
@@ -57,4 +61,31 @@ const buildUpdatesList = () => {
   div.innerHTML = updateContent;
 
   return div;
+};
+
+const buildSalesAnalytics = (element) => {
+  const salesAnalyticsData = SALES_ANALYTICS_DATA;
+
+  for (const analytic of salesAnalyticsData) {
+    const item = document.createElement("div");
+    item.classList.add(["item", analytic.itemClass]);
+
+    const itemHtml = `
+      <div class="icon">
+        <span class="material-icons-sharp"> ${analytic.icon} </span>
+      </div>
+      <div class="right">
+        <div class="info">
+          <h3>${analytic.title}</h3>
+          <small class="text-muted"> Last 24 Hours </small>
+        </div>
+        <h5 class="${analytic.colorClass}">${analytic.percentage}%</h5>
+        <h3>${analytic.sales}</h3>
+      </div>
+    `;
+
+    item.innerHTML = itemHtml;
+
+    element.appendChild(item);
+  }
 };
